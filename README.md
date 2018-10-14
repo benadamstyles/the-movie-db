@@ -1,6 +1,6 @@
 # The Movie DB
 
-This app allows you to search the database at https://www.themoviedb.org/.
+This app, currently available at https://heuristic-boyd-48ab04.netlify.com/, allows you to search the database at https://www.themoviedb.org/.
 
 ## How to run
 
