@@ -18,7 +18,10 @@ export default class OnScrollEnd extends PureComponent {
 
   handleScroll = debounce(
     event => {
-      if (event.pageY > document.body.offsetHeight - window.innerHeight * 2) {
+      if (
+        window.scrollY >
+        document.body.offsetHeight - window.innerHeight * 2
+      ) {
         this.props.callback()
       }
     },
