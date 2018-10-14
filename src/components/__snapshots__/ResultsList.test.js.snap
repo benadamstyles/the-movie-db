@@ -82,7 +82,7 @@ exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
 exports[`ResultsList renders a loading message while fetching 1`] = `
 <div>
   <p
-    class="css-7n945j"
+    class="css-zaw5e1"
   >
     loading ...
   </p>
