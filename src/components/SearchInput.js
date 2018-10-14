@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react'
+import React from 'react'
 import styled from 'react-emotion'
 
 const Header = styled('header')`
@@ -21,7 +21,11 @@ const Input = styled('input')`
 
 const SearchInput = props => (
   <Header>
-    <Input value={props.searchText} onChange={props.onChange} />
+    <Input
+      placeholder="Search the movie database"
+      value={props.searchText}
+      onChange={props.onChange}
+    />
   </Header>
 )
 
