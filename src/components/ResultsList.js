@@ -1,6 +1,13 @@
 import React, {Component} from 'react'
 import styled from 'react-emotion'
 import Async from 'react-async'
+import ResultsListItem, {Placeholder} from './ResultsListItem'
+
+const List = styled('ul')`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`
 
 export default class ResultsList extends Component {
   shouldComponentUpdate(nextProps) {
@@ -23,13 +30,17 @@ export default class ResultsList extends Component {
       <Async promiseFn={this.fetchResults} watch={this.props.searchText}>
         {({data, isLoading}) =>
           isLoading ? (
-            <p>loading ...</p>
+            <Placeholder>loading ...</Placeholder>
           ) : (
-            <ul>
-              {data.map(x => (
-                <li key={String(x.id)}>{x.title}</li>
+            <List>
+              {data.map(movie => (
+                <ResultsListItem
+                  key={String(movie.id)}
+                  movie={movie}
+                  onSelectMovie={this.props.onSelectMovie}
+                />
               ))}
-            </ul>
+            </List>
           )
         }
       </Async>
