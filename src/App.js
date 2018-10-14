@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import logo from './logo.svg'
 import './App.css'
+import SearchInput from './components/SearchInput'
 
 class App extends Component {
   state = {
@@ -14,10 +14,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <input value={this.state.inputText} onChange={this.onTextInput} />
-          <p>{this.state.inputText}</p>
-        </header>
+        <SearchInput
+          searchText={this.state.inputText}
+          onChange={this.onTextInput}
+        />
       </div>
     )
   }
