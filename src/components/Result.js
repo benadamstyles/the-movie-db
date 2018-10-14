@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'react-emotion'
-import {Spring} from 'react-spring'
+import {css} from 'emotion'
+import {Spring, animated, interpolate} from 'react-spring'
 import PropTypes from 'prop-types'
 
-const Box = styled('div')`
+const boxClass = css`
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: auto;
-  right: ${({right}) => right};
+  left: 0;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -41,23 +41,29 @@ const Description = styled('p')`
 `
 
 const Result = props => (
-  <Spring to={{right: props.movie ? '0' : '-100vw'}}>
-    {({right}) =>
+  <Spring native to={{x: props.movie ? '0' : '100vw'}}>
+    {({x}) =>
       props.movie ? (
-        <Box right={right}>
+        <animated.div
+          style={{
+            transform: interpolate([x], x => `translateX(${x})`),
+          }}
+          className={boxClass}>
           <Close type="button" onClick={props.dismiss}>
             close
           </Close>
           <Title>{props.movie.title}</Title>
-          <Description>{props.movie.overview}</Description>
-        </Box>
+          <Description>
+            {props.movie.overview || '[No description found]'}
+          </Description>
+        </animated.div>
       ) : null
     }
   </Spring>
 )
 
 Result.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: PropTypes.object,
   dismiss: PropTypes.func.isRequired,
 }
 
