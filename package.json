@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "debounce-fn": "^1.0.0",
     "emotion": "^9.2.12",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",

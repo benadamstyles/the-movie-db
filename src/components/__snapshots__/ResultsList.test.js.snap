@@ -81,5 +81,8 @@ exports[`ResultsList renders a loading message while fetching 1`] = `
   >
     loading ...
   </p>
+  <ul
+    class="css-ewdv3l"
+  />
 </div>
 `;

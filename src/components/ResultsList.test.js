@@ -38,13 +38,17 @@ afterEach(cleanup)
 
 describe('ResultsList', () => {
   it('renders a loading message while fetching', () => {
-    const {container, getByText} = render(<ResultsList searchText="abc" />)
+    const {container, getByText} = render(
+      <ResultsList searchText="abc" onSelectMovie={jest.fn()} />
+    )
     expect(container).toMatchSnapshot()
     expect(getByText('loading ...')).toBeTruthy()
   })
 
   it('renders a list of movies after a successful fetch', async () => {
-    const {getAllByTestId, container} = render(<ResultsList searchText="abc" />)
+    const {getAllByTestId, container} = render(
+      <ResultsList searchText="abc" onSelectMovie={jest.fn()} />
+    )
     await new Promise(r => setTimeout(r, 10))
     expect(container).toMatchSnapshot()
     expect(getAllByTestId('result-title')).toHaveLength(5)
