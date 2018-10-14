@@ -14,6 +14,7 @@ const Header = styled('header')`
 
 const Container = styled('div')`
   display: flex;
+  max-width: 100%;
 `
 
 const Input = styled('input')`
