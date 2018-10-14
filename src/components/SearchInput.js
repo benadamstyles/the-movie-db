@@ -12,6 +12,10 @@ const Header = styled('header')`
   padding: 2em;
 `
 
+const Container = styled('div')`
+  display: flex;
+`
+
 const Input = styled('input')`
   background-color: transparent;
   border: none;
@@ -20,19 +24,38 @@ const Input = styled('input')`
   color: white;
 `
 
+const Clear = styled('button')`
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2em;
+  transform: translateX(-100%);
+
+  &:hover,
+  &:focus {
+    color: yellow;
+  }
+`
+
 const SearchInput = props => (
   <Header>
-    <Input
-      placeholder="Search the movie database"
-      value={props.searchText}
-      onChange={props.onChange}
-    />
+    <Container>
+      <Input
+        placeholder="Search the movie database"
+        value={props.searchText}
+        onChange={props.onChange}
+      />
+      <Clear type="button" onClick={props.clearText}>
+        ×
+      </Clear>
+    </Container>
   </Header>
 )
 
 SearchInput.propTypes = {
   searchText: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  clearText: PropTypes.func.isRequired,
 }
 
 export default SearchInput

@@ -7,13 +7,15 @@ import ScrollToTop from './components/ScrollToTop'
 
 class App extends Component {
   state = {
-    inputText: 'test',
+    inputText: '',
     selectedMovie: null,
   }
 
   onTextInput = event => {
     this.setState({inputText: event.target.value})
   }
+
+  clearText = () => this.setState({inputText: ''})
 
   onSelectMovie = selectedMovie => this.setState({selectedMovie})
 
@@ -25,6 +27,7 @@ class App extends Component {
         <SearchInput
           searchText={this.state.inputText}
           onChange={this.onTextInput}
+          clearText={this.clearText}
         />
         <ResultsList
           searchText={this.state.inputText}
