@@ -3,6 +3,7 @@ import styled from 'react-emotion'
 import {css} from 'emotion'
 import {Spring, animated, interpolate} from 'react-spring'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 
 const boxClass = css`
   box-sizing: border-box;
@@ -15,6 +16,7 @@ const boxClass = css`
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1em;
+  overflow-y: scroll;
 `
 
 const Close = styled('button')`
@@ -53,6 +55,12 @@ const Result = props => (
             close
           </Close>
           <Title>{props.movie.title}</Title>
+          <Description>
+            Release date:{' '}
+            {moment(props.movie.release_date, 'YYYY-MM-DD').format(
+              'DD MMM, YYYY'
+            ) || '[No release date found]'}
+          </Description>
           <Description>
             {props.movie.overview || '[No description found]'}
           </Description>
