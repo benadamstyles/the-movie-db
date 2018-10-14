@@ -3,6 +3,7 @@ import './App.css'
 import SearchInput from './components/SearchInput'
 import ResultsList from './components/ResultsList'
 import Result from './components/Result'
+import ScrollToTop from './components/ScrollToTop'
 
 class App extends Component {
   state = {
@@ -29,6 +30,7 @@ class App extends Component {
           searchText={this.state.inputText}
           onSelectMovie={this.onSelectMovie}
         />
+        <ScrollToTop />
         <Result movie={this.state.selectedMovie} dismiss={this.dismissResult} />
       </div>
     )
