@@ -784,6 +784,10 @@
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.2.tgz#576ff7fb1230185b619a75d258cbc98f0867a8dc"
 
+"@sheerun/mutationobserver-shim@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
+
 "@svgr/core@^2.4.1":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@svgr/core/-/core-2.4.1.tgz#03a407c28c4a1d84305ae95021e8eabfda8fa731"
@@ -2686,6 +2690,14 @@ dom-serializer@0:
   dependencies:
     domelementtype "~1.1.1"
     entities "~1.1.1"
+
+dom-testing-library@^3.8.1:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.11.0.tgz#374fbc1f4b61405ac10a27cb3a6d3912c3ed1dd3"
+  dependencies:
+    "@sheerun/mutationobserver-shim" "^0.3.2"
+    pretty-format "^23.6.0"
+    wait-for-expect "^1.0.0"
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -6883,6 +6895,13 @@ react-spring@^5.9.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+react-testing-library@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.2.0.tgz#d7af9b0e6d1b653287d8c06cd0eab9e6d5d645ba"
+  dependencies:
+    dom-testing-library "^3.8.1"
+    wait-for-expect "^1.0.0"
+
 react@^16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
@@ -8244,6 +8263,10 @@ w3c-hr-time@^1.0.1:
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
   dependencies:
     browser-process-hrtime "^0.1.2"
+
+wait-for-expect@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wait-for-expect/-/wait-for-expect-1.0.1.tgz#73ab346ed56ed2ef66c380a59fd623755ceac0ce"
 
 walker@~1.0.5:
   version "1.0.7"

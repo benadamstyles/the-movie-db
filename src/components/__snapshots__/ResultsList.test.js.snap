@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
+<div>
+  <ul
+    class="css-ewdv3l"
+  >
+    <li>
+      <button
+        class="css-rg16dp"
+        type="button"
+      >
+        <span
+          class="css-17vo2iu"
+          data-testid="result-title"
+        >
+          Mock Movie
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-rg16dp"
+        type="button"
+      >
+        <span
+          class="css-17vo2iu"
+          data-testid="result-title"
+        >
+          Mock Movie
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-rg16dp"
+        type="button"
+      >
+        <span
+          class="css-17vo2iu"
+          data-testid="result-title"
+        >
+          Mock Movie
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-rg16dp"
+        type="button"
+      >
+        <span
+          class="css-17vo2iu"
+          data-testid="result-title"
+        >
+          Mock Movie
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-rg16dp"
+        type="button"
+      >
+        <span
+          class="css-17vo2iu"
+          data-testid="result-title"
+        >
+          Mock Movie
+        </span>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`ResultsList renders a loading message while fetching 1`] = `
+<div>
+  <p
+    class="css-7n945j"
+  >
+    loading ...
+  </p>
+</div>
+`;

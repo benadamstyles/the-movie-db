@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'react-emotion'
 import Async from 'react-async'
 import ResultsListItem, {Placeholder} from './ResultsListItem'
+import {fetch} from '../util/fetch'
 
 const List = styled('ul')`
   list-style-type: none;
