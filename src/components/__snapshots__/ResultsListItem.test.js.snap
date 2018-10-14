@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsListItem handles clicks as expected 1`] = `
+<div>
+  <li>
+    <button
+      class="css-rg16dp"
+      data-testid="result-button"
+      type="button"
+    >
+      <span
+        class="css-17vo2iu"
+        data-testid="result-title"
+      >
+        Mock Movie
+      </span>
+    </button>
+  </li>
+</div>
+`;

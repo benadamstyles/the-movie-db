@@ -32,6 +32,7 @@ const ResultsListItem = props => (
     <Button
       onClick={() => props.onSelectMovie(props.movie)}
       type="button"
+      data-testid="result-button"
       imagePath={props.movie.backdrop_path || props.movie.poster_path}>
       <ButtonText data-testid="result-title">{props.movie.title}</ButtonText>
     </Button>

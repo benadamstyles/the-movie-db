@@ -8,6 +8,7 @@ exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
     <li>
       <button
         class="css-rg16dp"
+        data-testid="result-button"
         type="button"
       >
         <span
@@ -21,6 +22,7 @@ exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
     <li>
       <button
         class="css-rg16dp"
+        data-testid="result-button"
         type="button"
       >
         <span
@@ -34,6 +36,7 @@ exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
     <li>
       <button
         class="css-rg16dp"
+        data-testid="result-button"
         type="button"
       >
         <span
@@ -47,6 +50,7 @@ exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
     <li>
       <button
         class="css-rg16dp"
+        data-testid="result-button"
         type="button"
       >
         <span
@@ -60,6 +64,7 @@ exports[`ResultsList renders a list of movies after a successful fetch 1`] = `
     <li>
       <button
         class="css-rg16dp"
+        data-testid="result-button"
         type="button"
       >
         <span
