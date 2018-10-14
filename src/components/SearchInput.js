@@ -22,6 +22,8 @@ const Input = styled('input')`
   font-size: 2em;
   border-bottom: 2px solid yellow;
   color: white;
+  width: 14em;
+  max-width: 100%;
 `
 
 const Clear = styled('button')`
