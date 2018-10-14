@@ -5,7 +5,9 @@ import PropTypes from 'prop-types'
 const Button = styled('button')`
   background-color: transparent;
   background-image: url(${props =>
-    `https://image.tmdb.org/t/p/original${props.imagePath}`});
+    props.imagePath
+      ? `https://image.tmdb.org/t/p/original${props.imagePath}`
+      : ''});
   background-size: cover;
   background-position: center center;
   border: none;
