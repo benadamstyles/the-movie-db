@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion'
 import {Spring} from 'react-spring'
+import PropTypes from 'prop-types'
 
 const Box = styled('div')`
   box-sizing: border-box;
@@ -54,5 +55,10 @@ const Result = props => (
     }
   </Spring>
 )
+
+Result.propTypes = {
+  movie: PropTypes.object.isRequired,
+  dismiss: PropTypes.func.isRequired,
+}
 
 export default Result

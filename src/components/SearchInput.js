@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
+import PropTypes from 'prop-types'
 
 const Header = styled('header')`
   display: flex;
@@ -28,5 +29,10 @@ const SearchInput = props => (
     />
   </Header>
 )
+
+SearchInput.propTypes = {
+  searchText: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+}
 
 export default SearchInput

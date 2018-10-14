@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
+import PropTypes from 'prop-types'
 
 const Button = styled('button')`
   background-color: transparent;
@@ -36,5 +37,10 @@ const ResultsListItem = props => (
     </Button>
   </li>
 )
+
+ResultsListItem.propTypes = {
+  movie: PropTypes.object.isRequired,
+  onSelectMovie: PropTypes.func.isRequired,
+}
 
 export default ResultsListItem

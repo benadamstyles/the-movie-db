@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'react-emotion'
 import Async from 'react-async'
+import PropTypes from 'prop-types'
 import ResultsListItem, {Placeholder} from './ResultsListItem'
 import {fetch} from '../util/fetch'
 
@@ -11,6 +12,11 @@ const List = styled('ul')`
 `
 
 export default class ResultsList extends Component {
+  static propTypes = {
+    searchText: PropTypes.string.isRequired,
+    onSelectMovie: PropTypes.func.isRequired,
+  }
+
   shouldComponentUpdate(nextProps) {
     return this.props.searchText !== nextProps.searchText
   }
