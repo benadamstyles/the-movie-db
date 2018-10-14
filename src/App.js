@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './App.css'
 import SearchInput from './components/SearchInput'
+import ResultsList from './components/ResultsList'
 
 class App extends Component {
   state = {
@@ -18,6 +19,7 @@ class App extends Component {
           searchText={this.state.inputText}
           onChange={this.onTextInput}
         />
+        <ResultsList searchText={this.state.inputText} />
       </div>
     )
   }
